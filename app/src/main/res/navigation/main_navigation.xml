@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/itemLogin">
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="com.ubaya.a160419082_newsapp.view.NewsListFragment"
+        android:label="News List"
+        tools:layout="@layout/fragment_news_list" >
+        <action
+            android:id="@+id/actionNewsDetail"
+            app:destination="@id/newsDetailFragment" />
+        <action
+            android:id="@+id/actionLogin"
+            app:destination="@id/itemLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemMyNews"
+        android:name="com.ubaya.a160419082_newsapp.view.MyNewsFragment"
+        android:label="My News">
+        <action
+            android:id="@+id/actionAddNews"
+            app:destination="@id/addNewsFragment" />
+        <action
+            android:id="@+id/actionEditNewsFragment"
+            app:destination="@id/editNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.ubaya.a160419082_newsapp.view.ProfileFragment"
+        android:label="Profile">
+        <action
+            android:id="@+id/actionProfileDetail"
+            app:destination="@id/profileDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemLogin"
+        android:name="com.ubaya.a160419082_newsapp.view.account.LoginFragment"
+        android:label="Login Account"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/actionNewsList"
+            app:destination="@id/itemHome" />
+        <action
+            android:id="@+id/actionRegister"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.ubaya.a160419082_newsapp.view.NewsDetailFragment"
+        android:label="News Detail"
+        tools:layout="@layout/fragment_news_detail">
+        <action
+            android:id="@+id/actionHome"
+            app:destination="@id/itemHome" />
+        <argument
+            android:name="idNews"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.ubaya.a160419082_newsapp.view.account.RegisterFragment"
+        android:label="Register Account"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/actionLogin2"
+            app:destination="@id/itemLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileDetailFragment"
+        android:name="com.ubaya.a160419082_newsapp.view.ProfileDetailFragment"
+        android:label="Detail Profile"
+        tools:layout="@layout/fragment_profile_detail">
+        <action
+            android:id="@+id/actionProfile"
+            app:destination="@id/itemProfile" />
+        <argument
+            android:name="idUser"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewsFragment"
+        android:name="com.ubaya.a160419082_newsapp.view.AddNewsFragment"
+        android:label="Add News"
+        tools:layout="@layout/fragment_add_news">
+        <action
+            android:id="@+id/actionMyNews"
+            app:destination="@id/itemMyNews" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNewsFragment"
+        android:name="com.ubaya.a160419082_newsapp.view.EditNewsFragment"
+        android:label="Edit News"
+        tools:layout="@layout/fragment_edit_news" >
+        <argument
+            android:name="idNews"
+            app:argType="integer" />
+        <action
+            android:id="@+id/actionMyNews2"
+            app:destination="@id/itemMyNews" />
+    </fragment>
+</navigation>

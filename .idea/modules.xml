@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/160419082_NewsApp.iml" filepath="$PROJECT_DIR$/.idea/modules/160419082_NewsApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/160419082_NewsApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/160419082_NewsApp.app.iml" />
+    </modules>
+  </component>
+</project>
